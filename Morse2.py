@@ -11,7 +11,7 @@ from pydub import AudioSegment
 from pydub.playback import play
 import os
 
-AUDIO_DIR=r"C:\Users\rucha\Desktop\morseAudioFiles"
+AUDIO_DIR=r"morseAudioFiles"
 
 def playAudio(question):
   filename=f"{question.lower()}.wav"
@@ -27,8 +27,6 @@ def playAudio(question):
     play(audio)
     
     time.sleep(0.5)
-    print("i played the audio")
-    print(f"{question} is the answer")
     
   except Exception as e:
     print(f"An error occurred while playing audio for '{question}': {e}")
@@ -63,7 +61,6 @@ def main():
         #this fnc also returns the correct answer
         question = randomCharSelector()
         playAudio(question)
-        print("returned to main")
 
         print("Audio finished playing")
         print("Enter your answer")
