@@ -11,7 +11,7 @@ from pydub import AudioSegment
 from pydub.playback import play
 import os
 
-AUDIO_DIR=r"C:\Users\rucha\Desktop\morseAudioFiles"
+AUDIO_DIR=r"morseAudioFiles"
 
 def playAudio(question):
   filename=f"{question.lower()}.wav"
